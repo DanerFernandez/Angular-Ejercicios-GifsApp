@@ -1,0 +1,19 @@
+<ngx-masonry>
+  <div
+    ngxMasonryItem
+    *ngFor="let gif of resultados"
+    class="col-md-3 col-sm-6 p-3 animate__animated animate__fadeIn"
+  >
+    <div class="card text-center" style="border-radius: 15px;">
+      <img
+        [src]="gif.images.downsized_medium.url"
+        [alt]="gif.title"
+        class="card-img-top"
+        style="border-radius: 15px 15px 0 0; cursor: pointer;"
+      />
+      <div class="card-body">
+        <h5 class="card-title">{{ gif.title }}</h5>
+      </div>
+    </div>
+  </div>
+</ngx-masonry>
